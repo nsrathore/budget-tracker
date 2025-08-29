@@ -40,3 +40,19 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Vite
+.vite/
+.vite/deps/
+.vite/cache/
+
+# Firebase local config & tokens
+firebase.json
+.firebaserc
+firebase-debug.log
+firebase-debug.*.log
