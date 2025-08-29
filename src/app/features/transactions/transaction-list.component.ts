@@ -8,7 +8,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { TransactionService } from '../../core/services/transaction.service-local';
+import { TransactionServiceLocal } from '../../core/services/transaction.service-local';
+import { TransactionServiceFirebase } from '../../core/services/transaction.service-firebase';
 import { TransactionFormComponent } from './transaction-form.component';
 
 @Component({
@@ -80,7 +81,7 @@ import { TransactionFormComponent } from './transaction-form.component';
 })
 
 export class TransactionListComponent {
-    ts = inject(TransactionService)
+    ts = inject(TransactionServiceLocal)
     dialog = inject(MatDialog);
 
     cols = ['date','description','category','type','amount','actions'] as const;

@@ -4,7 +4,7 @@ import { Transaction } from '../models/transaction.model';
 const LS_KEY = 'bt_transactions_v1';
 
 @Injectable({ providedIn: 'root'})
-export class TransactionService {
+export class TransactionServiceLocal {
     private _transactions = signal<Transaction[]>(this.load());
     transactions = computed(() => this._transactions());
 

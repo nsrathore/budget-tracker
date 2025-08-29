@@ -4,7 +4,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { TransactionService } from '../../core/services/transaction.service-local';
+import { TransactionServiceLocal } from '../../core/services/transaction.service-local';
+import { TransactionServiceFirebase } from '../../core/services/transaction.service-firebase';
 import { TransactionFormComponent } from '../transactions/transaction-form.component';
 
 @Component({
@@ -48,7 +49,7 @@ import { TransactionFormComponent } from '../transactions/transaction-form.compo
 })
 
 export class DashboardComponent {
-  ts = inject(TransactionService);
+  ts = inject(TransactionServiceLocal);
   dialog = inject(MatDialog);
 
   openForm(defaultType: 'income' | 'expense') {

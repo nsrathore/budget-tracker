@@ -2,7 +2,9 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { BaseChartDirective } from 'ng2-charts';
 import { Chart, registerables, ChartOptions, ChartData } from 'chart.js';
-import { TransactionService } from '../../core/services/transaction.service-local';
+import { TransactionServiceLocal } from '../../core/services/transaction.service-local';
+import { TransactionServiceFirebase } from '../../core/services/transaction.service-firebase';
+
 
 Chart.register(...registerables);
 
@@ -52,7 +54,7 @@ export class ChartsComponent {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
-    private ts: TransactionService
+    private ts: TransactionServiceLocal
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
 
