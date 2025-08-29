@@ -1,8 +1,10 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { BaseChartDirective } from 'ng2-charts';
-import { ChartOptions, ChartData } from 'chart.js';
+import { Chart, registerables, ChartOptions, ChartData } from 'chart.js';
 import { TransactionService } from '../../core/services/transaction.service';
+
+Chart.register(...registerables);
 
 @Component({
   selector: 'app-charts',
@@ -10,7 +12,7 @@ import { TransactionService } from '../../core/services/transaction.service';
   imports: [CommonModule, BaseChartDirective],
   template: `
     <section *ngIf="isBrowser" class="grid">
-      <div class="card">
+      <div class="card chart-container">
         <h3>Expenses by Category</h3>
         <canvas baseChart
                 [data]="pieData"
@@ -19,7 +21,7 @@ import { TransactionService } from '../../core/services/transaction.service';
         </canvas>
       </div>
 
-      <div class="card">
+      <div class="card chart-container">
         <h3>Monthly Income vs Expenses</h3>
         <canvas baseChart
                 [data]="barData"
@@ -28,7 +30,7 @@ import { TransactionService } from '../../core/services/transaction.service';
         </canvas>
       </div>
 
-      <div class="card wide">
+      <div class="card wide chart-container">
         <h3>Cumulative Balance Over Time</h3>
         <canvas baseChart
                 [data]="lineData"
