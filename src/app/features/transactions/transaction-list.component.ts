@@ -8,7 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { TransactionService } from '../../core/services/transaction.service';
+import { TransactionService } from '../../core/services/transaction.service-local';
 import { TransactionFormComponent } from './transaction-form.component';
 
 @Component({

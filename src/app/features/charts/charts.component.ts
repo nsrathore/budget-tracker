@@ -2,7 +2,7 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { BaseChartDirective } from 'ng2-charts';
 import { Chart, registerables, ChartOptions, ChartData } from 'chart.js';
-import { TransactionService } from '../../core/services/transaction.service';
+import { TransactionService } from '../../core/services/transaction.service-local';
 
 Chart.register(...registerables);
 

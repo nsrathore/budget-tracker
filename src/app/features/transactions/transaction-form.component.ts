@@ -7,7 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { v4 as uuid } from 'uuid';
-import { TransactionService } from '../../core/services/transaction.service';
+import { TransactionService } from '../../core/services/transaction.service-local';
 import { Transaction } from '../../core/models/transaction.model';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';

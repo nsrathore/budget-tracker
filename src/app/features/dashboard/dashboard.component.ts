@@ -4,7 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { TransactionService } from '../../core/services/transaction.service';
+import { TransactionService } from '../../core/services/transaction.service-local';
 import { TransactionFormComponent } from '../transactions/transaction-form.component';
 
 @Component({
