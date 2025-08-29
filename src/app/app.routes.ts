@@ -4,7 +4,7 @@ import { TransactionListComponent } from './features/transactions/transaction-li
 import { ChartsComponent } from './features/charts/charts.component';
 
 export const routes: Routes = [
-  { path: '', component: DashboardComponent, title: 'Budget Dashboard' },
+  { path: '', component: DashboardComponent, title: 'Budget Dashboard' }, // home page
   { path: 'transactions', component: TransactionListComponent, title: 'Transactions' },
   { path: 'charts', component: ChartsComponent, title: 'Charts' },
   { path: '**', redirectTo: '' }
